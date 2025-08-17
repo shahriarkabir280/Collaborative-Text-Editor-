@@ -31,7 +31,7 @@ A real-time collaborative text editor built in Java with JavaFX for GUI and TCP 
   3. Install VS Code and Extensions
      - VS Code: https://code.visualstudio.com/
      - Extensions:
-         - Java Extensions Pack (Includes Language Support for Java, Debugger for Java )
+         - Java Extensions Pack (Includes Language Support for Java, Debugger for Java)
           
 
    ## Project Folder Structure ##
@@ -57,15 +57,15 @@ package Client;
 // In ServerMain.java
 package Server;
  ```
-## Run the Project ##
+## Installation ##
 
 ### Step 1: Open Project in VS Code ###
 
 - Open the project root folder (Collab Text Editor) in VS Code.
-- Ensure VS Code detects the Java project (you should see “Java Projects” in Explorer).
+- Ensure VS Code detects the Java project ( you should see “Java Projects” in Explorer ).
 
 ### Step 2: Configure JavaFX in VS Code ###
-  1. Create a file named launch.json in .vscode/ folder (if it doesn’t exist).
+  1. Create a file named launch.json in .vscode/ folder ( if it doesn’t exist ).
   2. Add configuration for running JavaFX client:
 
 ```json
@@ -103,7 +103,44 @@ package Server;
 ```
 
   3. Add all .jar of javafx sdk to java project Referenced Library
-     - You can Follow this tutorial : [Setup JavaFX and java project ](https://youtu.be/AubJaosfI-0?si=tbC_FGxb0eWVhtcP)
+     - Follow this tutorial : [Setup JavaFX and java project ](https://youtu.be/AubJaosfI-0?si=tbC_FGxb0eWVhtcP)
+
+### Step 3: Start the Server ###
+- Go to the root folder ( Collaborative Text Editor ) of the project:
+  ``` PowerShell
+  # go to Server directory
+  cd Server
+  # compile all java files
+  javac *.java
+  # back to root folder
+  cd ..
+  # run the server
+  java Server.ServerMain
+  ```
+
+### Step 4: Start the Client ###
+  - Go to the root folder ( Collaborative Text Editor ) of the project:
+    ```PowerShell
+    #go to Client directory
+    cd Client
+    #compile the project
+    javac --module-path "C:/Software/JavaFx/javafx-sdk-21.0.2/lib" --add-modules javafx.controls,javafx.fxml *.java
+    #go back to the root folder
+    cd ..
+    # run the Client Text editor file
+    java --module-path "C:/Software/JavaFx/javafx-sdk-21.0.2/lib" --add-modules javafx.controls,javafx.fxml -cp . Client.TextEditorClient    
+    ```
+    
+### Step 5: Connect the Client ###
+- Enter :
+    - Server IP: 127.0.0.1 ( or LAN IP for other machines )
+    - Session ID: Any String ( e.g. ABCDE )
+    - Username : Any name
+-Click **Connect** - the text editor will open.
+
+### Step 6: Optional Settings ###
+- Adjust font size, save file, toggle chat, select theme from toolbar.
+- Multiple clients can connect to the same session on LAN.
   
 
 
