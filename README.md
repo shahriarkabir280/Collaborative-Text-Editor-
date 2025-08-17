@@ -12,6 +12,15 @@ A real-time collaborative text editor built in Java with JavaFX for GUI and TCP 
 - **Responsive UI:** Modern interface built with JavaFX.
 - **Threading & Concurrency:** Server handles up to 100 clients efficiently.
 
+# Technologies Used
+
+- **Java** – Core programming language
+- **JavaFX** – GUI framework
+- **TCP Sockets** – Client-server communication
+- **Concurrency & Threads** – ThreadPool for server, dedicated client threads
+- **URL Encoding** – Safe transmission of special characters
+  
+
 # Collaborative Text Editor - VS Code Setup Guide
 
 ## Prerequisites
@@ -141,10 +150,10 @@ package Server;
 ### Step 6: Optional Settings ###
 - Adjust font size, save file, toggle chat, select theme from toolbar.
 - Multiple clients can connect to the same session on LAN.
-  
 
-
-    
+### Contact ###
+Md. Shahriar Kabir
+Email: shahriarkabir280@gmail.com
 
 
 
